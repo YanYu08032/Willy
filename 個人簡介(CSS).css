@@ -1,0 +1,47 @@
+body{
+  min-height: 100vh;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.profile-card{
+  padding: 20px 40px;
+  border-radius: 20px;
+  backdrop-filter: saturate(200%) blur(15px);
+  -webkit-backdrop-filter: saturate(200%) blur(15px);
+    background: rgba(155, 155, 155,.3);
+  border: 2px solid rgba(204, 204, 204,.2);
+}
+
+.個人簡介 p{
+  color: #fff;
+  text-align: center;
+}
+
+.個人簡介 h1{
+  color: #fff;
+  text-align: center;
+}
+
+.個人簡介 img{
+  height: 160px;
+  width: 120px;
+  display: block;
+  margin: auto;
+}
+
+.個人簡介 table{
+  color: #fff;
+  border-color: #fff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+

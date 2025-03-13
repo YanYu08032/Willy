@@ -1,0 +1,87 @@
+body{
+    min-height: 100vh;
+    margin: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  }
+  
+
+  
+  .profile-card{
+    padding: 20px 40px;
+    border-radius: 20px;
+    backdrop-filter: saturate(200%) blur(15px);
+    -webkit-backdrop-filter: saturate(200%) blur(15px);
+      background: rgba(155, 155, 155,.3);
+    border: 2px solid rgba(204, 204, 204,.2);
+  }
+  
+  .profile-img{
+    transform: translateZ(30px);
+  }
+  
+  .profile-img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1.2);
+    height: 100%;
+    background: rgb(28 28 28 / 30%);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    z-index: -1;
+    
+  }
+  
+  .profile-img img{
+    border-radius: 50%;
+    width: 120px;
+    display: block;
+    margin: auto;
+  }
+  
+  .profile-content{
+    text-align: center;
+  }
+  
+  .profile-content h3,
+  .profile-content h5{
+    color:#fff;
+    font-family: 'Inter', arial;
+    margin: 0;
+  }
+  
+  .profile-content h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-content h5{
+    font-weight: 400;
+  }
+
+  .connection h6{
+    text-align: left;
+    color:#fff;
+    font-family: 'Inter', arial;
+    margin: 0;
+    font-weight: 200;
+  }
+
+  .line h6{
+    text-align: center;
+    color:#fff;
+    font-family: 'Inter', arial;
+    margin: 0;
+    font-weight: 200;
+  }
+
+  .line img{
+    width: 60px;
+    display: block;
+    margin: auto;
+  }
