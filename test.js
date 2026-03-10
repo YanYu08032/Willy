@@ -65,11 +65,12 @@ function openSubGallery(category) {
     
     if(galleryData[category] && galleryData[category].length > 0) {
         galleryData[category].forEach(item => {
-            contentDiv.innerHTML += `
-                <div class="project-card">
-                    <img src="${item.src}" onclick="openLightbox(this.src)">
-                    <p>${item.title}</p>
-                </div>
+           // 修改 script.js 裡的 innerHTML 部分
+    contentDiv.innerHTML += `
+        <div class="project-card">
+            <img src="${item.src}" loading="lazy" onclick="openLightbox(this.src)">
+            <p>${item.title}</p>
+        </div>
             `;
         });
     } else {
@@ -104,5 +105,6 @@ function openLightbox(src) {
 // 5. 啟動網站
 
 initWebsite();
+
 
 
