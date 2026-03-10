@@ -8,7 +8,7 @@ let galleryData = {
 
 // 2. 核心功能：從 Cloudflare Worker 抓取 Notion 資料
 async function initWebsite() {
-    const workerUrl = 'https://你的WORKER網址.workers.dev'; 
+    const workerUrl = 'https://notion-api-worker.hqs6f6g44p.workers.dev/'; 
 
     try {
         const response = await fetch(workerUrl);
@@ -104,3 +104,4 @@ function openLightbox(src) {
 // 5. 啟動網站
 
 initWebsite();
+
