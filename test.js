@@ -25,7 +25,7 @@ async function initWebsite() {
         const category = props.Category.multi_select[0].name.toLowerCase();
         
         // --- 修改這裡：如果標題為空，自動給一個預設值 ---
-        let title = "";
+        let title = "123";
         if (props.Title && props.Title.title && props.Title.title.length > 0) {
             title = props.Title.title[0].plain_text;
         }
@@ -102,4 +102,5 @@ function openLightbox(src) {
 }
 
 // 5. 啟動網站
+
 initWebsite();
