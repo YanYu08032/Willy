@@ -65,7 +65,6 @@ function openSubGallery(category) {
     
     if(galleryData[category] && galleryData[category].length > 0) {
         galleryData[category].forEach(item => {
-           // 修改 script.js 裡的 innerHTML 部分
     contentDiv.innerHTML += `
         <div class="project-card">
             <img src="${item.src}" loading="lazy" onclick="openLightbox(this.src)">
