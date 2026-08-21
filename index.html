@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willy Chen | Portfolio & Photography</title>
+    <meta name="description" content="Willy Chen 的個人作品集，記錄生活與攝影點滴。應用數學系畢業，熱衷於捕捉美好的瞬間。">
+    <meta property="og:title" content="Willy Chen | Portfolio">
+    <meta property="og:description" content="探索 Willy Chen 的攝影作品與個人專案。">
+    <meta property="og:image" content="Up2.JPG">
+    <link href="test.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header class="header-banner">
+        <div class="banner-text">
+            <h1>No pain no gain</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li id="nav-home" class="active"><a onclick="showPage('home')">HOME</a></li>
+            <li id="nav-projects"><a onclick="showPage('projects')">PROJECTS</a></li>
+            <li id="nav-portfolio"><a onclick="showPage('portfolio')">PORTFOLIO</a></li>
+            <li id="nav-about"><a onclick="showPage('about')">ABOUT</a></li>
+            <li id="nav-contact"><a onclick="showPage('contact')">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <section class="content-area">
+            
+            <div id="home" class="page active">
+                <h2 class="section-title">Welcome</h2>
+                <div class="welcome-content">
+                    <p>嗨！我是 Willy。這是我用來記錄生活與攝影的小天地。</p>
+                    <p>我相信每一張照片背後都有一個故事，歡迎來到我的視角。</p>
+                </div>
+                <div class="featured-img">
+                    <img src="Low.JPG" alt="Featured" onclick="openLightbox(this.src)" decoding="async">
+                </div>
+            </div>
+
+            <div id="projects" class="page">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>數據分析與應用數學</h3>
+                        <p>探索如何將數學模型應用於日常生活，從演算法到數據視覺化。</p>
+                    </div>
+                    <div class="project-item" style="margin-top: 20px;">
+                        <h3>攝影專題：光影紀實</h3>
+                        <p>一系列關於街道與自然光線的攝影計畫，捕捉那些轉瞬即逝的時刻。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="page">
+                <div id="portfolio-main">
+                    <h2 class="section-title">RECENT PROJECTS</h2>
+                    <div class="project-grid">
+                        <div class="project-card" onclick="openSubGallery('daily')">
+                            <img src="IMG_4930.JPG" alt="Daily" loading="lazy">
+                            <p>Daily Life</p>
+                        </div>
+                        <div class="project-card" onclick="openSubGallery('graduation')">
+                            <img src="IMG_4941.JPG" alt="Graduation" loading="lazy">
+                            <p>Graduation</p>
+                        </div>
+                        <div class="project-card" onclick="openSubGallery('scenery')">
+                            <img src="IMG_4940.JPG" alt="Scenery" loading="lazy">
+                            <p>Scenery</p>
+                        </div>
+                        <div class="project-card" onclick="openSubGallery('food')">
+                            <img src="IMG_4928.JPG" alt="Food" loading="lazy">
+                            <p>Foods</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portfolio-detail" style="display: none;">
+                    <div style="margin-bottom: 20px;">
+                        <a onclick="closeSubGallery()" style="cursor: pointer; color: var(--primary-pink); font-weight: bold;">← BACK TO PORTFOLIO</a>
+                    </div>
+                    <h2 id="gallery-title" class="section-title">Category Name</h2>
+                    
+                    <!-- Loading Spinner -->
+                    <div id="loading-spinner" class="spinner-container" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>載入中...</p>
+                    </div>
+
+                    <div id="gallery-content" class="project-grid"></div>
+                </div>
+            </div>
+
+            <div id="about" class="page">
+                <h2 class="section-title">ABOUT ME</h2>
+                <div class="about-content">
+                    <p>我今年畢業於中原大學應用數學系資訊與人工智慧學程，並輔修電子工程學系。在大學期間，我除了培養數學與邏輯分析能力，也積極接觸資訊、人工智慧及電子相關領域，希望透過跨領域的學習，建立更完整的程式設計與問題解決能力。求學過程中，我接觸過 C、C++、Python、HTML、SQL 等程式語言，並透過課程與實作累積程式開發經驗。
+
+
+
+                </div>
+            </div>
+
+            <div id="contact" class="page">
+                <h2 class="section-title">CONTACT INFO</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>如果您對我的作品有興趣，或想一起創作，歡迎聯絡我：</p>
+                        <ul class="contact-list" style="list-style: none; padding: 0; margin-top: 20px;">
+                            <li><strong>Email：</strong> <a href="mailto:wei08032@gmail.com">wei08032@gmail.com</a></li>
+                            <li><strong>Phone：</strong> +886 981-785-932</li>
+                            <li><strong>Instagram：</strong> <a href="https://instagram.com/willy_0628" target="_blank">@willy_0628</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="profile-box">
+                <img src="大頭貼.JPG" alt="Willy" class="avatar" decoding="async">
+                <h3 class="profile-name">Willy Chen</h3>
+                <p class="profile-title">應用數學系畢業</p>
+                <p class="quote">
+                    數學不會背叛你，<br>
+                    數學不會就是不會。
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>©  Willy Chen</p>
+        <div class="footer-links">
+            <a href="https://instagram.com/willy_0628" target="_blank">Instagram</a>
+            <span>|</span>
+            <a href="mailto:wei08032@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <!-- 改良後的燈箱 -->
+    <div id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+            <p id="lightbox-caption"></p>
+        </div>
+        <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+<script src="test.js"></script>
+
+</body>
+</html>
